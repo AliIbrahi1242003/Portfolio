@@ -1,0 +1,294 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Base styling for the navigation */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Responsive styles for the navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Responsive hamburger menu (optional) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Hide the menu by default on small screens */
+    }
+
+    nav.active ul {
+        display: flex; /* Show the menu when active */
+    }
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.intro-section {
+    height: 500px;
+}
+.profile-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+.project-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+/* About section styling */
+.about-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.education-section, .aspirations-section {
+    flex: 1 1 45%; /* Each section takes about 45% of the width */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-section h2, .aspirations-section h2 {
+    margin-bottom: 10px;
+    font-size: 24px; 
+    cursor: default;
+}
+
+.education-section h2:hover, .aspirations-section h2:hover{
+    transform: scale(1.1);
+}
+
+.education-section p, .aspirations-section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .education-section, .aspirations-section {
+        flex: 1 1 100%;
+    }
+}
+
+.technical-skills, .soft-skills {
+
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technical-skills h2, .soft-skills h2 {
+    text-align: center;
+    color: #333;
+    cursor:default;
+
+}
+
+.technical-skills h2:hover, .soft-skills h2:hover{
+    transform: scale(1.1);
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-section ul li {
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.skills-section ul li:last-child {
+    border-bottom: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea, form button {
+    margin: 10px 0;
+}
+
+#form-feedback {
+    color: green;
+    margin-top: 20px;
+}
+/* Introduction section styling */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile-image {
+    width: 250px;  /* Increased width */
+    height: 250px; /* Increased height */
+    border-radius: 50%;
+    margin-right: 20px; /* Adds space between the image and the text */
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-text h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contact section styling */
+.contact-section {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Take full width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contact-form button {
+    width: 100%; /* Button takes full width */
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.btn-hover:hover{
+    transform: scale(1.2);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
